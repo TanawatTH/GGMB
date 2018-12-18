@@ -1,0 +1,100 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+
+    <script src="ejs.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+    <script src="cordova.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDBKnTfXJoRQAjOXaWyItE35Q7qPPdxl70",
+            authDomain: "shopee-69f3b.firebaseapp.com",
+            databaseURL: "https://shopee-69f3b.firebaseio.com",
+            projectId: "shopee-69f3b",
+            storageBucket: "shopee-69f3b.appspot.com",
+            messagingSenderId: "1025816911376"
+        };
+        firebase.initializeApp(config);
+        // Initialize Cloud Firestore through Firebase
+        var db = firebase.firestore();
+
+        // Disable deprecated features
+        db.settings({
+            timestampsInSnapshots: true
+        });
+
+
+
+
+
+    </script>
+    <style>
+        .toolbaricon {
+            padding-left: 5px;
+            padding-bottom: 5px;
+            padding-right: 5px;
+            color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <ons-page>
+        <div style="text-align: center; margin-top: 30px;">
+            <h3>REgister</h3>
+            <p>
+                <ons-input id="username" modifier="underbar" placeholder="Username" float></ons-input>
+            </p>
+            <p>
+                <ons-input id="password" modifier="underbar" type="password" placeholder="Password" float></ons-input>
+            </p>
+            <p>
+                    <ons-input id="StudentID" modifier="underbar" placeholder="StudentID" float></ons-input>
+                </p>
+                <p>
+                        <ons-input id="Firstname" modifier="underbar" placeholder="Firstname" float></ons-input>
+                    </p>
+                    <p>
+                            <ons-input id="Lastname" modifier="underbar" placeholder="Lastname" float></ons-input>
+                        </p>
+                        <p>
+                                <ons-input id="Licenseplate" modifier="underbar" placeholder="Licenseplate" float></ons-input>
+                            </p>
+                            <p>
+                                    <ons-input id="Major" modifier="underbar" placeholder="Major" float></ons-input>
+                                </p>
+            <p style="margin-top: 30px;">
+                <ons-button onclick="register()">Sign Up For a New User </ons-button>
+            </p>
+
+        </div>
+    </ons-page>
+</body>
+
+<script>
+    function register() {
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+
+        firebase.auth().createUserWithEmailAndPassword(username, password).catch(function (error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            ons.notification.alert(errorCode + ':' + errorMessage);
+        });
+
+    }
+    firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+            // User is signed in.
+            // Send user to home.html
+            window.location.href = 'home.html';
+        }
+    });
+</script>
+
+</html>

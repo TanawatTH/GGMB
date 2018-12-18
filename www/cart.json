@@ -1,0 +1,7 @@
+{
+    "cart" : [
+        { "itemname" : "Apple Watch Series 3 GPS 42mm Grey", "price" : 12650.00 , "photo" : "item1.jpg"},
+        { "itemname" : "MICROLAB SPEAKER 2.1", "price" : 1570.00 , "photo" : "item2.jpg"},
+        { "itemname" : "Nike Air Max 90 ดำเทาแดง เบอร์ 40", "price" : 2990.00 , "photo" : "item3.jpg"}
+    ]
+}

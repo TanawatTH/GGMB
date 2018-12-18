@@ -1,0 +1,15 @@
+{
+    "appname" : "PSU SHopping",
+    "slides" : [ "2.jpg", "1.jpg", "3.jpg" ],
+    "categories" : [
+        { "name" : "Cosmetic" , "icon": "md-face"},
+        { "name" : "Sports" , "icon": "md-bike"},
+        { "name" : "Computer" , "icon": "md-devices"},
+        { "name" : "Camera" , "icon": "md-camera"},
+        { "name" : "Furniture" , "icon": "md-seat"},
+        { "name" : "Smartphone" , "icon": "md-smartphone"},
+        { "name" : "Toy" , "icon": "md-toys"},
+        { "name" : "Appliance" , "icon": "md-washing-machine"},
+        { "name" : "Hardware" , "icon": "md-wrench"}
+    ]
+}

@@ -1,0 +1,78 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+  <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+  
+  <script src="ejs.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+  <script src="cordova.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+    apiKey: "AIzaSyCV-3dvAUevSse70YnxA0q53R_Ksd_MVTU",
+    authDomain: "motorbike-39f30.firebaseapp.com",
+    databaseURL: "https://motorbike-39f30.firebaseio.com",
+    projectId: "motorbike-39f30",
+    storageBucket: "motorbike-39f30.appspot.com",
+    messagingSenderId: "1064933064524"
+  };
+  firebase.initializeApp(config);
+    // Initialize Cloud Firestore through Firebase
+    var db = firebase.firestore();
+
+    // Disable deprecated features
+    db.settings({
+      timestampsInSnapshots: true
+    });
+
+ 
+
+
+
+
+
+  </script>
+
+  <style>
+    .toolbaricon {
+      padding-left: 5px;
+      padding-bottom: 5px;
+      padding-right: 5px;
+      color: orange;
+    }
+  </style>
+</head>
+
+
+<body>
+    <ons-page>
+        <div style="text-align: center; margin-top: 30px;">
+             <p style="margin-top: 30px;">
+                <ons-button onclick="logout()">Sign Out</ons-button>
+            </p>
+        </div>
+    </ons-page>
+</body>
+<script>
+
+function logout(){
+firebase.auth().signOut().then(function() {
+    ons.notification.alert('OMG ! Logout').then(function(){
+    window.location.href ='login.html';
+});
+  // Sign-out successful.
+}).catch(function(error) {
+  // An error happened.
+});
+    
+}
+
+
+</script>
+
+</html>
+            
+           

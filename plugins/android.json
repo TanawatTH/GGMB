@@ -1,0 +1,30 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-browsertab": {
+      "PACKAGE_NAME": "com.tanawat.hello"
+    },
+    "cordova-plugin-buildinfo": {
+      "PACKAGE_NAME": "com.tanawat.hello"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.tanawat.hello"
+    },
+    "cordova-plugin-qrscanner": {
+      "PACKAGE_NAME": "com.tanawat.hello"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.tanawat.hello"
+    },
+    "cordova-universal-links-plugin": {
+      "PACKAGE_NAME": "com.tanawat.hello"
+    }
+  },
+  "dependent_plugins": {}
+}
